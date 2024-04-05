@@ -12,7 +12,7 @@ HOST="$(echo $CLUSTER_HOST)"
 timeout() { perl -e 'alarm shift; exec @ARGV' "$@"; }
 
 displaySingleClusterAvailibility() {
-    if timeout 2 nc -z dex.$1 80 2>/dev/null
+    if timeout 3 nc -z dex.$1 80 2>/dev/null
     then
         echo -e "\033[42m\033[30m $1 ✓ \033[39m\033[49m"
         
