@@ -9,7 +9,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Call Reusable Workflow
-        uses: kyma-project/test-infra/.github/workflows/reusable-workflow.yml@main
+        uses: akiioto/test-infra/.github/workflows/reusable-workflow.yml@oidc_verify
         with:
           repository: ${{ github.event.pull_request.head.repo.full_name }}
           ref: ${{ github.event.pull_request.head.ref }}
