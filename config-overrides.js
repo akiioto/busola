@@ -12,7 +12,7 @@ module.exports = {
       ...config.resolve.alias,
     };
 
-    config.resolve.extensions = [...config.resolve.extensions, '.ts', '.tsx'];
+    config.resolve.extensions = [...config.resolve.extensions, '.tss', '.tsx'];
     config.plugins = [
       ...config.plugins,
       new webpack.DefinePlugin({
